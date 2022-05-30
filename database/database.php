@@ -1,11 +1,11 @@
-<?php
+<?php 
 class Database{
 
     private $host;
     private $nama_database;
     private $username;
     private $password;
-
+    
     public $connection;
 
     function __construct(){
@@ -15,19 +15,19 @@ class Database{
         $this->nama_database = "praktikum_daftartugas6m";
     }
 
-    public function getConnecion(){
+    public function getConnection(){
         $this->connection = null;
         try{
             $this->connection = new PDO("mysql:host=".$this->host.";dbname=".$this->nama_database,
-            $this->username, $this->password);
+                $this->username, $this->password);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e){
             echo "Error get koneksi : " . $e->getMessage();
         }
-        
+
         return $this->connection;
-
     }
-
 }
+
+
 ?>

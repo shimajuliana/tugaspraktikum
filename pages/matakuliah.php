@@ -1,1 +1,1 @@
-<h2>Mata Kuliah</h2>
+<h2>Mata Kuliah </h2>
